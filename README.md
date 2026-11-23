@@ -5,7 +5,7 @@ AnTech Care là website tĩnh giới thiệu dịch vụ vệ sinh, nâng cấp 
 
 ## Demo
 - GitHub Pages: https://antienbui0607-crypto.github.io/an-tech-care/  
-  URL được giữ nguyên từ README trước; chưa xác minh trực tiếp trong lượt kiểm thử này.
+  Đã mở được URL công khai và kiểm tra giao diện trong lượt kiểm thử ngày 23/11/2026.
 - Repository: https://github.com/antienbui0607-crypto/an-tech-care
 
 ## Tính năng
@@ -19,7 +19,7 @@ AnTech Care là website tĩnh giới thiệu dịch vụ vệ sinh, nâng cấp 
 1. Mở `index.html` trực tiếp trong trình duyệt để xem bản cục bộ; `css/style.css` và ảnh được tham chiếu bằng đường dẫn tương đối.
 2. Dùng các mục **Giới thiệu**, **Dịch vụ**, **Bảng giá**, **Liên hệ** hoặc nút **Xem dịch vụ** để điều hướng.
 3. Điền biểu mẫu rồi bấm **Gửi yêu cầu đặt lịch** để mở `ket-qua.html`. Đây là luồng thử nghiệm tĩnh, không gửi/lưu dữ liệu trên máy chủ; do dùng `GET`, dữ liệu biểu mẫu xuất hiện trong URL.
-4. Có thể mở URL GitHub Pages ở mục Demo, nhưng trạng thái triển khai công khai chưa được kiểm tra trong lượt này.
+4. Có thể mở URL GitHub Pages ở mục Demo; trang công khai đã được truy cập trong lượt kiểm thử ngày 23/11/2026.
 
 ## Cấu trúc thư mục
 ```text
@@ -38,6 +38,12 @@ AnTech Care là website tĩnh giới thiệu dịch vụ vệ sinh, nâng cấp 
 |-- docs/
 |   |-- AI_LOG.md
 |   `-- evidence-index.md
+|-- evidence/
+|   |-- desktop-1440px.png
+|   |-- form-submit-ket-qua.png
+|   |-- form-validation-error.png
+|   |-- mobile-320px.png
+|   `-- pages-live-1440px.png
 |-- CHANGELOG.md
 `-- README.md
 ```
@@ -52,8 +58,8 @@ AnTech Care là website tĩnh giới thiệu dịch vụ vệ sinh, nâng cấp 
 
 ## Hạn chế / Chưa kiểm tra
 - Trường Email hiện có `required` và `aria-describedby`, nhưng chưa có `minlength`/`maxlength`; ba trường còn lại có đủ bốn thuộc tính kiểm tra được yêu cầu.
-- Chưa xác minh URL GitHub Pages trực tiếp, trình duyệt ẩn danh hoặc hiển thị trên iPhone thật; chưa chạy kiểm tra bảo mật chuyên sâu.
-- Chưa lưu ảnh chụp màn hình làm bằng chứng. Biểu mẫu dùng GET nên dữ liệu xuất hiện trong URL/trình duyệt, dù không gửi/lưu lên máy chủ; không dùng luồng mô phỏng này cho dữ liệu nhạy cảm.
+- Đã xác minh URL GitHub Pages trực tiếp; chưa kiểm tra trong cửa sổ ẩn danh hoặc trên iPhone thật, chưa chạy kiểm tra bảo mật chuyên sâu.
+- Ảnh chụp kiểm thử được lưu trong `evidence/`; chi tiết kích thước, viewport và giới hạn ảnh nằm trong [docs/evidence-index.md](docs/evidence-index.md). Ảnh Playwright không gồm thanh địa chỉ; URL GET được ghi trong evidence index. Biểu mẫu dùng GET nên dữ liệu xuất hiện trong URL/trình duyệt, dù không gửi/lưu lên máy chủ; không dùng luồng mô phỏng này cho dữ liệu nhạy cảm.
 
 ## Khai báo AI
 GitHub Copilot hỗ trợ rà soát tĩnh mã nguồn và cập nhật tài liệu bàn giao. Xem [docs/AI_LOG.md](docs/AI_LOG.md); các kiểm tra chưa chạy và phần sinh viên cần tự xác nhận được ghi riêng.
